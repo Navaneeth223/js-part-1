@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #f7f7f7;
+    --secondary-color: #1a1a1a;
+    --accent-color: #007bff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* --- Typography & Global --- */
+h1, h2, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* --- Header/Hero Section --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.hero-title {
+    opacity: 0; /* Will be animated in JS */
+}
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #999;
+    margin-top: 15px;
+    opacity: 0; /* Will be animated in JS */
+}
+
+/* --- Content Sections (Layout for Parallax) --- */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+    padding: 100px 5%;
+    border-top: 1px solid #333;
+}
+
+.content-section.reversed {
+    flex-direction: row-reverse;
+}
+
+.content-text {
+    flex: 1;
+    max-width: 45%;
+}
+
+.content-image {
+    flex: 1;
+    max-width: 45%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Placeholder Images - Replace with actual images */
+#img-1 {
+    background-image: url('https://picsum.photos/800/600?grayscale&random=1');
+}
+#img-2 {
+    background-image: url('https://picsum.photos/800/600?grayscale&random=2');
+}
+
+/* --- Footer --- */
+.footer-section {
+    padding: 30px 5%;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+}
